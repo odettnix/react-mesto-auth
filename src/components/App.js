@@ -78,9 +78,9 @@ function App() {
               userName={userName} userDescription={userDescription} cards={cards} />
       <Footer />
       <PopupWithForm name='profile' title={"Редактировать профиль"} buttonText={"Сохранить"} isOpen={isOpenProfilePopup} onClose={closeAllPopups}>
-        <input className="popup__input popup__input_value-name" id="popup-input-name" name="popup__name" placeholder="Ваше имя" required minlength="2" maxlength="40" />
+        <input className="popup__input popup__input_value-name" id="popup-input-name" name="popup__name" placeholder="Ваше имя" required minLength="2" maxLength="40" />
         <span className="popup__input-error popup-input-name-error"></span>
-        <input className="popup__input popup__input_value-text" id="popup-input-text" name="popup__text" placeholder="О себе" required minlength="2" maxlength="200" />
+        <input className="popup__input popup__input_value-text" id="popup-input-text" name="popup__text" placeholder="О себе" required minLength="2" maxLength="200" />
         <span className="popup__input-error popup-input-text-error"></span>
       </PopupWithForm>
       <PopupWithForm name='avatar' title={"Обновить аватар"} buttonText={"Сохранить"} isOpen={isOpenAvatarPopup} onClose={closeAllPopups}>
@@ -88,7 +88,7 @@ function App() {
         <span className="popup__input-error popup-input-avatar-error"></span>
       </PopupWithForm>
       <PopupWithForm name='place' title={"Новое место"} buttonText={"Сохранить"} isOpen={isOpenPlacePopup} onClose={closeAllPopups}>
-        <input type="text" className="popup__input popup__input_value-location" id="popup-input-location" name="popup__name" value="" placeholder="Название" required minlength="2" maxlength="30" />
+        <input type="text" className="popup__input popup__input_value-location" id="popup-input-location" name="popup__name" value="" placeholder="Название" required minLength="2" maxLength="30" />
         <span className="popup__input-error popup-input-location-error"></span>
         <input type="url" className="popup__input popup__input_value-url" id="popup-input-url" name="popup__text" value="" placeholder="Ссылка на картинку" required />
         <span className="popup__input-error popup-input-url-error"></span>

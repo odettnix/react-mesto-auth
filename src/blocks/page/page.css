@@ -10,6 +10,8 @@
     text-rendering: optimizeLegibility;
     min-width: 320px;
     font-family: 'Inter', Arial, sans-serif;
+    min-height: 100vh;
+   
 }
 
 @media screen and (max-width: 880px) {
