@@ -1,0 +1,9 @@
+@import url('./__avatar-picture/profile__avatar-picture.css');
+@import url('./__avatar-button/profile__avatar-button.css');
+
+.profile__avatar{
+    position: relative;
+}
+
+
+

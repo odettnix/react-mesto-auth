@@ -1,0 +1,19 @@
+.elements__button-remove {
+    display: none;
+    position: absolute;
+    width: 18px;
+    height: 19px;
+    background-image: url(../../../images/drop_image.svg);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    outline: none;
+    border: none;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    transition: opacity .3s linear;
+}
+
+.elements__button-remove:hover {
+    opacity: 0.6;
+  }

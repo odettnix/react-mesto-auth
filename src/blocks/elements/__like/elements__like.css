@@ -1,0 +1,7 @@
+.elements__like {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    text-align: center;
+    color: black; 
+}
