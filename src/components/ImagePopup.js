@@ -4,15 +4,12 @@ function ImagePopup ({card, isOpen, onClose}) {
         <div className="popup__image-container">
             <button className="popup__close" type="button" ></button>
             <figure className="popup__image-wrapper">
-                <img className="popup__image" src={card.cardImg} alt ={`Картинка: ${card.cardName}`} />
-                <figcaption className="popup__image-caption">{card.cardName}</figcaption>
+                <img className="popup__image" src={card.link} alt ={`Картинка: ${card.cardName}`} />
+                <figcaption className="popup__image-caption">{card.name}</figcaption>
             </figure>
         </div>
     </div>
   );
     
 }
-  
-    
-  
   export default ImagePopup;
