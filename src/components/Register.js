@@ -17,13 +17,11 @@ function Register({register}) {
     <main className="content">
       <div className="login">
       <h2 className="login__title">Регистрация</h2>
-      
         <AuthForm
           onSubmit={handelSubmit}
           disabled={!(errors.email === "" && errors.password === "")}
           buttonText={"Зарегистрироваться"}
         >
-          
           <input
             id="email"
             className="login__input"
@@ -53,7 +51,6 @@ function Register({register}) {
         </AuthForm>
         <Link to="/sign-in" className="login__paragraph">Уже зарегистрировались? Войти</Link>
         </div>
-      
     </main>
   );
 } 

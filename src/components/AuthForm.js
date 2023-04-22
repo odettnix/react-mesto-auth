@@ -9,4 +9,4 @@ function AuthForm({disabled, onSubmit, children, buttonText}) {
     );
   }
   
-  export default AuthForm;
+export default AuthForm;

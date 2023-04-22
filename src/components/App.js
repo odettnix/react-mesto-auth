@@ -43,7 +43,6 @@ function App() {
   const navigate = useNavigate();
   const [userEmail, setUserEmail] = useState("")
 
-
   function signOut() {
     localStorage.removeItem('jwt');
     navigate('/sign-in')
@@ -59,7 +58,6 @@ function App() {
           text: "Вы успешно зарегистрировались!",
         });
         navigate('/sign-in', {replace: true})
-        
       }
     })
     .catch(() => {
@@ -197,8 +195,6 @@ function App() {
     }
   }
 
-
-
   function handleCardDelete(card) {
     setIsLoading(true);
     api.removeCard(card._id)
@@ -269,8 +265,6 @@ function App() {
     setOpenInfoTooltip(false);
   }
 
-
-
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className="page">
@@ -333,7 +327,6 @@ function App() {
         />
     </div>
   </CurrentUserContext.Provider>
-    
   );
 }
 

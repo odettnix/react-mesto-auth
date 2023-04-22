@@ -47,5 +47,4 @@ export const checkToken = (token) => {
   .then((res) => {
     return checkResponse(res)
   })
-
 }

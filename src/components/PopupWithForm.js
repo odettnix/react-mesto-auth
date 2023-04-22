@@ -12,9 +12,6 @@ function PopupWithForm ({disabled, name, isOpen, title, onClose, buttonText, onS
     </div>
     </div>
   );
-    
 }
   
-    
-  
-  export default PopupWithForm;
+export default PopupWithForm;

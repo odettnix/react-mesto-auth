@@ -55,4 +55,5 @@ function AddPlacePopup({isLoading, isOpen, onAddCard}) {
       </PopupWithForm>
     );
   }
-  export default AddPlacePopup;
+  
+export default AddPlacePopup;

@@ -15,4 +15,5 @@ function InfoTooltip ({onClose, isOpen, registerResponse}) {
     </div>
   );
 }
+
 export default InfoTooltip

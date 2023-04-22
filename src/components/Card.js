@@ -3,7 +3,6 @@ import React from "react";
 
 function Card ({card, onCardClick, onClickCardDelete, onCardLike}) {
 
-
   const currentUser = React.useContext(CurrentUserContext);
 
   function handleCardClick() {
@@ -18,12 +17,9 @@ function Card ({card, onCardClick, onClickCardDelete, onCardLike}) {
     onCardLike(card);
   }
 
-
   const isOwn = card.owner._id === currentUser._id;
 
-
   const isLiked = card.likes.some((i) => i._id === currentUser._id);
-
 
   const cardLikeButtonClassName = `elements__like-button ${
     isLiked && "elements__like-button_active"
@@ -46,6 +42,4 @@ function Card ({card, onCardClick, onClickCardDelete, onCardLike}) {
   );
 }
   
-    
-  
-  export default Card;
+export default Card;
