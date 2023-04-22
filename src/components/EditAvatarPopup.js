@@ -1,43 +1,34 @@
 import PopupWithForm from "./PopupWithForm";
 import {useEffect, useRef, useState} from "react";
+import ValidationForm from "../hooks/ValidationForm";
 
-function EditAvatarPopup(props) {
+function EditAvatarPopup({isOpen, onUpdateAvatar, onClose, isLoading}) {
   const inputRef = useRef("");
-  const [isValidInput, setIsValidInput] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
-
-  function onChange(e) {
-    if (e.target.validity.valid) {
-      setErrorMessage("");
-      setIsValidInput(true);
-    } else {
-      setErrorMessage(e.target.validationMessage);
-      setIsValidInput(false);
-    }
-  }
-
-  useEffect(() => {
-    setIsValidInput(false);
-    setErrorMessage("");
-    inputRef.current.value = "";
-  }, [props.isOpen]);
+  const {handleChange, errors, setErrors, isValid, setIsValid} = ValidationForm();
 
   function handleSubmit(e) {
     e.preventDefault();
 
-    props.onUpdateAvatar({
-      avatar: inputRef.current.value,
+    onUpdateAvatar({
+      avatar:
+        inputRef.current.value,
     });
   }
 
+  useEffect(() => {
+    setIsValid(false);
+    setErrors("");
+    inputRef.current.value = "";
+  }, [isOpen]);
+
   return (
     <PopupWithForm
-      disabled={!isValidInput}
+      disabled={!isValid}
       name="avatar"
       title={"Обновить аватар"}
-      buttonText={props.isLoading ? `Сохранение...` : `Сохранить`}
+      buttonText={isLoading ? `Сохранение...` : `Сохранить`}
       onSubmit={handleSubmit}
-      isOpen={props.isOpen}
+      isOpen={isOpen}
     >
       <input
         id="avatar-input"
@@ -47,9 +38,9 @@ function EditAvatarPopup(props) {
         name="avatar"
         placeholder="Ссылка на картинку"
         required
-        onChange={onChange}
+        onChange={handleChange}
       />
-      <span className="popup__input-error popup-input-avatar-error">{errorMessage}</span>
+      <span className="popup__input-error popup-input-avatar-error">{errors.avatar}</span>
     </PopupWithForm>
   );
 }
