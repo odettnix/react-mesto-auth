@@ -3,7 +3,6 @@
 ### *"Место"* - одностраничный сайт с небольшой галереей.
 ### Для реализации данного проекта использовались css, HTML и javascript.
 
-* [Ссылка на сайт Git Pages](https://odettnix.github.io/mesto/)
 * [Ссылка на макет в Figma](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
 
 ### В ходе выполнения данной учебной работы были испольованы: flex- и grid- верстка.
